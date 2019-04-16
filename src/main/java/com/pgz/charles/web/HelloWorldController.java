@@ -17,6 +17,13 @@ public class HelloWorldController {
     public String getName(@RequestParam(value = "person", required = false) String personName){
         return personName;
     }
+    /**
+     * @Author Administrator
+     * @Description //TODO
+     * @Date 19/4/16 9:45
+     * @Param [id]
+     * @return java.lang.String
+     **/
     @GetMapping(value="/fetch/{id}")
     public String getDynamicUriValue(@PathVariable String id){
         System.out.println("ID is " + id);

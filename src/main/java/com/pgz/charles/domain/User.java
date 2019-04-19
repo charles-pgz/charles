@@ -32,6 +32,8 @@ public class User implements Serializable {
     private String nickName;
     @Column(nullable = false,length = 13)
     private String moblie;
+    @Column(nullable = false)
+    private String regTime;
 
     public User() {
         super();
@@ -102,7 +104,5 @@ public class User implements Serializable {
     public void setRegTime(String regTime) {
         this.regTime = regTime;
     }
-
-    private String regTime;
 
 }

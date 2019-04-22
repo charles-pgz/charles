@@ -32,25 +32,25 @@ public class RedisTests {
 
     @Test
     public void test(){
-        stringRedisTemplate.opsForValue().set("a","111");
-        Assert.assertEquals("111",stringRedisTemplate.opsForValue().get("a"));
+        stringRedisTemplate.opsForValue().set("1","111");
+        Assert.assertEquals("111",stringRedisTemplate.opsForValue().get("1"));
     }
 
     @Test
     public void testObj() throws InterruptedException {
         User user=new User("a","123456","a@qq.com","aa","15600000000",new Date().toLocaleString());
         ValueOperations<String,User> vo=redisTemplate.opsForValue();
-        vo.set("a1",user);
-        vo.set("b",user,1, TimeUnit.MINUTES);
+        vo.set("u1",user);
+        vo.set("u2",user,1, TimeUnit.MINUTES);
         Thread.sleep(1000);
-        boolean exists = redisTemplate.hasKey("b");
+        boolean exists = redisTemplate.hasKey("u2");
         if(exists){
             System.out.println("exist is true");
         }else{
             System.out.println("exist is false");
         }
-        //Assert.assertEquals("a",vo.get("a").getUserName());
-        Assert.assertEquals("a",((User)redisTemplate.opsForValue().get("a1")).getUserName());
+        Assert.assertEquals("a",vo.get("a").getUserName());
+        //Assert.assertEquals("a",((User)redisTemplate.opsForValue().get("u1")).getUserName());
     }
 
 }

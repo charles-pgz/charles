@@ -49,6 +49,15 @@ public class User implements Serializable {
         this.regTime = regTime;
     }
 
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+        this.email = "";
+        this.nickName = "";
+        this.moblie = "";
+        this.regTime = new Date().toLocaleString();
+    }
+
     public Long getId() {
         return id;
     }

@@ -24,6 +24,7 @@ public class UserController {
     public User getUser(){
         User user=new User("name","123456","name@qq.com","nickname","15600000000", new Date().toLocaleString());
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
+        int[] ar=new int[]{1,2,3,4,5,6,7,8};
         return user;
     }
 
@@ -36,4 +37,6 @@ public class UserController {
         httpSession.setAttribute("uuid",uuid);
         return httpSession.getId();
     }
+
+
 }

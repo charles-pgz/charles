@@ -52,9 +52,9 @@ public class User implements Serializable {
     public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.email = "";
-        this.nickName = "";
-        this.moblie = "";
+        this.email = "*******@qq.com";
+        this.nickName = "520";
+        this.moblie = "156********";
         this.regTime = new Date().toLocaleString();
     }
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Example list</title>
+</head>
+<body>
+    <h1>for 循环</h1>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>pwd</th>
+            <th>mobile</th>
+            <th>regTime</th>
+            <th>today</th>
+        </tr>
+        <tr th:each="user : ${users}" th:class="${userStat.odd}?'odd':'even'">
+            <td th:text="${user.userName}">charles</td>
+            <td th:text="${user.password}">p@ssw0rd</td>
+            <td th:text="${user.moblie}">***</td>
+            <td th:text="${user.regTime}">now</td>
+            <td th:text="${#dates.createToday()}">now</td>
+        </tr>
+    </table>
+</body>
+</html>

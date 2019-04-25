@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Example if/unless</title>
+</head>
+<body>
+    <h1>if/unless</h1>
+    <a th:if="${flag=='yes'}" th:href="@{http://favorites.ren/}">home</a>
+    <a th:unless="${flag!='yes'}" th:href="@{http://www.baidu.com}" th:target="blank">百度</a>
+</body>
+</html>

@@ -20,8 +20,8 @@ import java.util.List;
 @Controller
 public class ThymeleafController {
 
-    //@Autowired
-    //private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @RequestMapping("/string")
     public String string(ModelMap map){
@@ -35,7 +35,7 @@ public class ThymeleafController {
     }
     @RequestMapping("/list")
     public String list(ModelMap map){
-        map.addAttribute("users",getUserList());//userRepository.findAll()
+        map.addAttribute("users",userRepository.findAll());//getUserList()
         return "list";
     }
     @RequestMapping("/url")

@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class) //scanBasePackages= "com"
-//@ComponentScan("com.pgz.charles.*")
+@SpringBootApplication() //exclude = DataSourceAutoConfiguration.class , scanBasePackages= "com.*"
+//@ComponentScan("com.*")
 //@EnableJpaRepositories("com.pgz.charles.repository")
-//@EntityScan("com.pgz.charles.domain")
+//@EntityScan("com.pgz.charles.*")
 public class P2pApplication {
 
     public static void main(String[] args) {
